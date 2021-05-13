@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Alerts | Archon Admin Template</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- Loading Bootstrap -->
+	<link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+
+	<!-- Loading Stylesheets -->    
+	<link href="css/archon.css" rel="stylesheet">
+	<link href="css/responsive.css" rel="stylesheet">
+
+	<!-- Loading Custom Stylesheets -->    
+	<link href="css/custom.css" rel="stylesheet">
+
+	<link rel="shortcut icon" href="images/favicon.ico">
+
+	<!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
+	<!--[if lt IE 9]>
+	<script src="js/html5shiv.js"></script>
+	<![endif]-->
+</head>
+<body>
+	<div class="frame">
+		<div class="sidebar">
+			<div class="wrapper">
+
+				<!-- Replace the src of the image with your logo -->
+				<a href="index.html" class="logo"><img src="images/logo.png" alt="Archon Admin" /></a>
+				<ul class="nav  nav-list">
+
+					<!-- sidebar input search box -->
+					<li class="nav-search">
+						<div class="form-group">
+							<input type="text" class="form-control nav-search" placeholder="Search through site" />
+							<span class="input-icon fui-search"></span>
+						</div>
+					</li>
+
+					<!-- Sidebar header @add class nav-header for sidebar header -->
+					<li class="nav-header">Overview</li>
+					<li><a href="index.html"><i class="fa fa-dashboard"></i>Dashboard </a></li>
+					<li>
+						<a class="dropdown" href="#"><i class="fa fa-tint"></i> UI Features <span class="label">11</span></a>
+						<ul>
+							<li><a href="buttons.html"><i class="fa fa-bullhorn"></i> Buttons &amp; Notifications</a></li>
+							<li class="active"><a href="alerts.html"><i class="fa fa-bell"></i> Alerts</a></li>
+							<li><a href="progressbars.html"><i class="fa fa-rub"></i> Progress Bars</a></li>
+							<li><a href="labelsbadges.html"><i class="fa fa-bullseye"></i> Labels &amp; Badges </a></li>
+							<li><a href="breadcrumbs.html"><i class="fa fa-ellipsis-horizontal"></i>Breadcrumbs</a></li>
+							<li><a href="pagination.html"><i class="fa fa-sort-amount-asc"></i> Pagination</a></li>
+							<li><a href="sliders.html"><i class="fa fa-minus"></i> Sliders</a></li>
+							<li><a href="nestable.html"><i class="fa fa-list"></i> Nestable</a></li>
+							<li><a href="utilities.html"><i class="fa fa-tag"></i> Utilities</a></li>
+							<li><a href="image-crop.html"><i class="fa fa-crop"></i> Image Crop</a></li>
+							<li><a href="file-manager.html"><i class="fa fa-file"></i> File Manager</a></li>
+						</ul>	
+					</li>
+					<li><a href="widgets.html"><i class="fa fa-group"></i>Widgets</a></li>
+
+					<!-- Sidebar header @add class nav-header for sidebar header -->
+					<li class="nav-header">Pages</li>
+					<li><a href="template.html"><i class="fa fa-list-alt"></i>Template Page</a></li>
+					<li><a href="faq.html"><i class="fa fa-pagelines"></i>FAQ</a></li>
+					<li><a href="invoice.html"><i class="fa fa-money"></i>Invoice</a></li>
+					<li><a href="timeline.html"><i class="fa fa-clock-o"></i>Timeline</a></li>
+					<li><a href="calendar.html"><i class="fa fa-calendar"></i>Calendar</a></li>
+					<li><a href="gallery.html"><i class="fa fa-picture-o"></i>Gallery</a></li>
+					<li><a href="mail.html"><i class="fa fa-envelope"></i>Mail</a></li>
+					<li class="frontend"><a href="frontend/index.html"><i class="fa fa-building"></i>Front End<span class="label">14</span></a></li>
+					<li class="frontend"><a href="frontend/index-v2.html"><i class="fa fa-building"></i>Front End Single Page</a></li>
+					<li> <!-- Example for second level menu -->
+						<a class="dropdown" href="#"><i class="fa fa-user"></i> Profile <span class="label">2</span></a>
+						<ul>
+							<li><a href="profile.html"><i class="fa fa-user"></i> Model One</a></li>
+							<li><a href="profileTwo.html"><i class="fa fa-user"></i> Model Two</a></li>
+						</ul>	
+					</li>
+					<li> <!-- Example for Third level menu -->
+						<a class="dropdown" href="#"><i class="fa fa-sitemap"></i> 3 Level menu <span class="label">3</span></a>
+						<ul>
+							<li><a href="#"><i class="fa fa-hdd"></i> Submenu </a></li>
+							<li><a href="#"><i class="fa fa-coffee"></i>Submenu </a></li>
+							<li>
+								<a class="dropdown" href="#"><i class="fa fa-sitemap"></i> One More <span class="label">3</span></a>
+								<ul>
+									<li><a href="#"><i class="fa fa-hdd"></i> Submenu </a></li>
+									<li><a href="#"><i class="fa fa-coffee"></i>Submenu </a></li>
+									<li>
+										<a class="dropdown" href="#"><i class="fa fa-sitemap"></i> More here <span class="label">3</span></a>
+										<ul>
+											<li><a href="#"><i class="fa fa-hdd"></i> Submenu </a></li>
+											<li><a href="#"><i class="fa fa-coffee"></i>Submenu</a></li>
+											<li><a href="#"><i class="fa fa-crop"></i> One More</a></li>
+										</ul>	
+									</li>
+								</ul>	
+							</li>
+						</ul>	
+					</li>
+
+
+					<!-- Sidebar header @add class nav-header for sidebar header -->
+					<li class="nav-header">Components</li>
+					<li>
+						<a class="dropdown" href="#"><i class="fa fa-table"></i>Tables <span class="label">3</span></a>
+						<ul>
+							<li><a href="tables.html"><i class="fa fa-table"></i> Basic Tables </a></li>
+							<li><a href="dynamic-tables.html"><i class="fa fa-table"></i> Dynamic Tables </a></li>
+							<li><a href="editing-tables.html"><i class="fa fa-table"></i> Editable Tables </a></li>
+						</ul>
+					</li>
+					<li><a href="grid.html"><i class="fa fa-th-large"></i>Grid</a></li>
+					<li><a href="panels.html"><i class="fa fa-windows"></i>Panels</a></li>
+					<li><a href="wells.html"><i class="fa fa-square-o"></i>Wells</a></li>
+					<li> <!-- Example for second level menu -->
+						<a class="dropdown" href="#"><i class="fa fa-bar-chart-o"></i> Charts <span class="label">4</span></a>
+						<ul>
+							<li><a href="morris.html"><i class="fa fa-bar-chart-o"></i> Morris</a></li>
+							<li><a href="nvd.html"><i class="fa fa-hdd"></i> NVD</a></li>
+							<li><a href="flot.html"><i class="fa fa-bolt"></i>Flot</a></li>
+							<li><a href="knobs.html"><i class="fa fa-dot-circle-o"></i>Knobs</a></li>
+						</ul>	
+					</li>
+					<li><a href="typography.html"><i class="fa fa-text-width"></i>Typography</a></li>
+					<li>
+						<a class="dropdown" href="forms.html"><i class="fa fa-list-alt"></i>Forms  <span class="label">8</span></a>
+						<ul>
+							<li><a href="form-elements.html"><i class="fa  fa-tasks"></i> Form Elements</a></li>
+							<li><a href="forms.html"><i class="fa fa-indent"></i>Forms</a></li>
+							<li><a href="inputgroups.html"><i class="fa fa-group"></i> Input Groups</a></li>
+							<li><a href="form-editor.html"><i class="fa fa-code"></i>Wysiwyg & Markdown</a></li>
+							<li><a href="form-wizard.html"><i class="fa fa-coffee"></i>Form wizard</a></li>
+							<li><a href="file-uploads.html"><i class="fa fa-file"></i>Dropzone & File Upload</a></li>
+							<li><a href="multiple-file-upload.html"><i class="fa fa-copy"></i>Multiple File Upload</a></li>
+							<li><a href="input-masks.html"><i class="fa fa-list-alt"></i>Input Masks</a></li>
+						</ul>	
+					</li>
+					<li><a href="icons.html"><i class="fa fa-truck"></i>Icons</a></li>
+				</ul>
+
+			</div><!-- /Wrapper -->
+		</div><!-- /Sidebar -->
+
+
+		<!-- Main content starts here-->
+		<div class="content">
+			<div class="navbar">
+				<a href="#" onclick="return false;" class="btn pull-left toggle-sidebar"><i class="fa fa-list"></i></a>
+				<a class="navbar-brand" href="index.html">Archon</a>
+
+				<!-- Top right user menu -->
+				<ul class="nav navbar-nav user-menu pull-right">
+					<!-- First nav user item -->
+					<li class="dropdown hidden-xs">
+						<a class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-envelope"></i></a>
+						<ul class="dropdown-menu right inbox">
+							<li class="dropdown-menu-title">
+								INBOX <span>(25)</span>
+							</li>
+							<li>
+								<img src="images/theme/avatarTwo.png" alt="" class="avatar">
+								<div class="message">
+									<span class="username">Anusha</span> 
+									<span class="mini-details">(6) <i class="fa fa-paperclip"></i></span>
+									<span class="time pull-right"> 06:58 PM</span>
+									<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's ... </p>
+								</div>
+							</li>
+							<li>
+								<img src="images/theme/avatarFive.png" alt="" class="avatar">
+								<div class="message">
+									<span class="username">Veeru</span> 
+									<span class="mini-details">(2) <i class="fa fa-paper-clip"></i></span>
+									<span class="time pull-right"> 09:58 AM</span>
+									<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's ... </p>
+								</div>
+							</li>
+							<li>
+								<img src="images/theme/avatarSix.png" alt="" class="avatar">
+								<div class="message">
+									<span class="username">Nag</span> 
+									<span class="mini-details">(6) <i class="fa fa-paper-clip"></i></span>
+									<span class="time pull-right">Yesterday</span>
+									<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's ... </p>
+								</div>
+							</li>
+							<li>
+								<img src="images/theme/avatarSeven.png" alt="" class="avatar">
+								<div class="message">
+									<span class="username">Harish</span> 
+									<span class="mini-details"> <i class="fa fa-picture-o"></i></span>
+									<span class="time pull-right">14/12/2013</span>
+									<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's ... </p>
+								</div>
+							</li>
+							<li class="dropdown-menu-footer">
+								<a href="#">View All Messages</a>
+							</li>
+						</ul>
+					</li><!-- /dropdown -->
+
+					<!-- Second nav user item -->
+					<li class="dropdown hidden-xs">
+						<a class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-bell"></i></a>
+						<ul class="dropdown-menu right notifications">
+							<li class="dropdown-menu-title">
+								Notifications
+							</li>
+							<li>
+								<i class="fa fa-cog avatar text-success"></i>
+								<div class="message">
+									<span class="username text-success">New settings activated</span> 
+									<span class="time pull-right"> 06:58 PM</span>
+								</div>
+							</li>
+							<li>
+								<i class="fa fa-shopping-cart avatar text-danger"></i>
+								<div class="message">
+									<span class="username text-danger">You have 2 returns</span> 
+									<span class="time pull-right"> 04:29 PM</span>
+								</div>
+							</li>
+							<li>
+								<i class="fa fa-user avatar text-success"></i>
+								<div class="message">
+									<span class="username text-success">New User registered</span> 
+									<span class="time pull-right"> Yesterday</span>
+								</div>
+							</li>
+							<li>
+								<i class="fa fa-comment avatar text-info"></i>
+								<div class="message">
+									<span class="username text-info">New Comment received</span> 
+									<span class="time pull-right"> Yesterday</span>
+								</div>
+							</li>
+							<li>
+								<i class="fa fa-cog avatar text-warning"></i>
+								<div class="message">
+									<span class="username text-warning">User deleted</span> 
+									<span class="time pull-right"> 2 days ago</span>
+								</div>
+							</li>
+							<li>
+								<i class="fa fa-dollar avatar"></i>
+								<div class="message">
+									<span class="username">Earned 200 points</span> 
+									<span class="time pull-right">3 days ago</span>
+								</div>
+							</li>
+							<li>
+								<i class="fa fa-hdd avatar text-danger"></i>
+								<div class="message">
+									<span class="username text-danger">Memory size exceeded </span> 
+									<span class="time pull-right"> 1 week ago</span>
+								</div>
+							</li>
+
+							<li class="dropdown-menu-footer">
+								<a href="#">View All Notifications</a>
+							</li>
+						</ul>
+					</li><!-- / dropdown -->
+
+					<li class="dropdown user-name">
+						<a class="dropdown-toggle" data-toggle="dropdown"><img src="images/theme/avatarSeven.png" class="user-avatar" alt="" />Vijay Kumar</a>
+							<ul class="dropdown-menu right inbox user">
+								<li class="user-avatar">
+									<img src="images/theme/avatarSeven.png" class="user-avatar" alt="" />
+									Vijay Kumar
+								</li>
+							<li>
+								<i class="fa fa-user avatar"></i>
+								<div class="message">
+									<span class="username"><a href="profile.html">Profile</a></span> 
+								</div>
+							</li>
+							<li>
+								<i class="fa fa-cogs avatar"></i>
+								<div class="message">
+									<span class="username">Settings </span> 
+								</div>
+							</li>
+							<li>
+								<i class="fa fa-book avatar"></i>
+								<div class="message">
+									<span class="username">Help </span> 
+								</div>
+							</li>
+							<li><a href="#">Logout</a></li>
+						</ul>
+					</li><!-- / dropdown -->				
+				</ul><!-- / Top right user menu -->
+
+			</div><!-- / Navbar-->
+
+			<div id="main-content">
+				<div class="row">
+					<div class="col-mod-12">
+						<ul class="breadcrumb">
+							<li><a href="index.html">DashBoard</a></li>
+							<li><a href="#">UI Features</a></li>
+							<li><a href="alerts.html">Alerts</a></li>
+							<li class="active">Bread Crumb</li>
+						</ul>
+					</div>
+				</div>
+				<h3 class="page-header">Alerts</h3>
+				<!-- Basic Alerts -->
+				<div class="row">
+					<div class="col-md-12">
+						<div class="panel panel-archon">
+							<div class="panel-heading">
+								<h3 class="panel-title">
+									Basic Alerts
+									<span class="pull-right">
+										<a  href="#" class="panel-minimize"><i class="fa fa-chevron-up"></i></a>
+										<a  href="#"  class="panel-settings"><i class="fa fa-cog"></i></a>
+										<a  href="#"  class="panel-close"><i class="fa fa-times"></i></a>
+									</span>
+								</h3>
+							</div>
+							<div class="panel-body">
+								<div class="row">
+									<div class="col-md-12">
+										<!-- Alert Info -->
+										<div class="alert alert-info">
+											Heads up! This alert needs your attention, but it's not super important.
+										</div>
+										<div class="alert alert-success">
+											Well done! You successfully read this important alert message.
+										</div>
+										<div class="alert alert-warning">
+											Warning! Best check yo self, you're not looking too good.
+										</div>
+										<div class="alert alert-danger">
+											Oh snap! Change a few things up and try submitting again.
+										</div>
+									</div><!-- /col-md-12 -->
+								</div>
+							</div> <!-- /panel body -->	
+							<div class="panel-footer">						
+								<code>
+									&lt;div class=&quot;alert alert-info&quot;&gt; ... &lt;div&gt; <br/>
+									&lt;div class=&quot;alert alert-success&quot;&gt; ... &lt;div&gt; <br/>
+									&lt;div class=&quot;alert alert-warning&quot;&gt; ... &lt;div&gt; <br/>
+									&lt;div class=&quot;alert alert-danger&quot;&gt; ... &lt;div&gt; <br/>
+								</code>
+							</div> <!-- /Panel footer -->
+						</div>
+					</div>
+				</div>
+				
+				<!-- Dismissable Alerts -->
+				<div class="row">
+					<div class="col-md-12">
+						<div class="panel panel-archon">
+							<div class="panel-heading">
+								<h3 class="panel-title">
+									Dismissable Alerts
+									<span class="pull-right">
+										<a  href="#" class="panel-minimize"><i class="fa fa-chevron-up"></i></a>
+										<a  href="#"  class="panel-settings"><i class="fa fa-cog"></i></a>
+										<a  href="#"  class="panel-close"><i class="fa fa-times"></i></a>
+									</span>
+								</h3>
+							</div>
+							<div class="panel-body">
+								<div class="row">
+									<div class="col-md-6">
+										<!-- Alert Info -->
+										<div class="alert alert-info alert-dismissable">
+											<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+											<h3>Information Label</h3>
+												<p>An error message is information displayed when an <a href="#fakelink">unexpected condition occurs</a>, usually on a computer or other device. On modern operating systems with graphical user interfaces, error messages are often displayed using dialog boxes.</p>
+												<a href="#fakelink" class="btn btn-info btn-wide">Turn it off now</a>
+												<a href="#fakelink" class="btn btn-wide">It’s ok</a>
+										</div>
+										<div class="alert alert-danger alert-dismissable">
+											<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+												<h3>Error: The change you wanted was rejected.</h3>
+												<p>An error message is information displayed when an <a href="#fakelink">unexpected condition occurs</a>, usually on a computer or other device. On modern operating systems with graphical user interfaces, error messages are often displayed using dialog boxes.</p>
+												<a href="#fakelink" class="btn btn-danger btn-wide">Turn it off now</a>
+												<a href="#fakelink" class="btn btn-wide">It’s ok</a>
+										</div>
+									</div><!-- /col-md-6 -->
+									<div class="col-md-6">
+										<div class="alert alert-success alert-dismissable">
+											<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+											<h3>Disc Space was extended twice.</h3>
+												<p>An error message is information displayed when an <a href="#fakelink">unexpected condition occurs</a>, usually on a computer or other device. On modern operating systems with graphical user interfaces, error messages are often displayed using dialog boxes.</p>
+												<a href="#fakelink" class="btn btn-primary btn-wide"><i class="fa fa-check"></i> Hurray!</a>
+												<a href="#fakelink" class="btn btn-info btn-wide">Share on twitter</a>
+										</div>
+										<div class="alert alert-warning alert-dismissable">
+											<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+											<h3>Hey Warning, Some problems on our servers.</h3>
+												<p>An error message is information displayed when an <a href="#fakelink">unexpected condition occurs</a>, usually on a computer or other device. On modern operating systems with graphical user interfaces, error messages are often displayed using dialog boxes.</p>
+												<a href="#fakelink" class="btn btn-warning btn-wide">Fix it</a>
+												<a href="#fakelink" class="btn btn-wide">Okey, no probs!</a>
+										</div>
+									</div><!-- /col-md-6 -->
+								</div>
+							</div>
+						</div>
+					</div> <!-- /col-md-12 -->
+				</div>
+				
+				<!-- Links In Alerts -->
+				<div class="row">
+					<div class="col-md-12">
+						<div class="panel panel-archon">
+							<div class="panel-heading">
+								<h3 class="panel-title">
+									Alerts With Links
+									<span class="pull-right">
+										<a  href="#" class="panel-minimize"><i class="fa fa-chevron-up"></i></a>
+										<a  href="#"  class="panel-settings"><i class="fa fa-cog"></i></a>
+										<a  href="#"  class="panel-close"><i class="fa fa-times"></i></a>
+									</span>
+								</h3>
+							</div>
+							<div class="panel-body">
+								<div class="row">
+									<div class="col-md-6">
+										<!-- Alert Info -->
+										<div class="alert alert-info alert-dismissable">
+											<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+											<h3>Important!</h3>
+												<p>An error message is information displayed when an <a href="#" class="alert-link">unexpected condition occurs</a></p>
+												
+										</div>
+										<div class="alert alert-danger alert-dismissable">
+											<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+											<h3>Error: Your system is at risk!</h3>
+												<p>An error message is information displayed when an <a href="#fakelink" class="alert-link">unexpected condition occurs</a>, usually on a computer or other device.</p>
+												
+										</div>
+									</div><!-- /col-md-6 -->
+									<div class="col-md-6">
+										<div class="alert alert-success alert-dismissable">
+											<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+											<h3>Congratulations</h3>
+												<p>You have reset your password. Please <a href="#fakelink" class="alert-link">click here</a> to check your new password</p>
+												
+										</div>
+										<div class="alert alert-warning alert-dismissable">
+											<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+											<h3>License Expired!</h3>
+												<p>Your license has been expired. If you are happy in using our product <a href="#fakelink" class="alert-link">Sign up here</a></p>
+												
+										</div>
+									</div><!-- /col-md-6 -->
+								</div>
+							</div>
+						</div>
+					</div> <!-- /col-md-12 -->
+				</div>
+				
+			</div><!-- /Main Content  @7 -->
+
+		</div><!-- / Content @5 -->
+
+		<div class="row footer">
+			<div class="col-md-12 text-center">
+				© 2013 <a href="http://bootstrapguru.com">Bootstrap Guru</a>
+			</div>
+		</div>
+	</div> <!-- Frame -->
+
+
+	<!-- Load JS here for greater good =============================-->
+	<script src="js/jquery-1.8.3.min.js"></script>
+	<script src="js/jquery-ui-1.10.3.custom.min.js"></script>
+	<script src="js/jquery.ui.touch-punch.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/bootstrap-select.js"></script>
+	<script src="js/bootstrap-switch.js"></script>
+	<script src="js/flatui-checkbox.js"></script>
+	<script src="js/flatui-radio.js"></script>
+	<script src="js/jquery.tagsinput.js"></script>
+	<script src="js/jquery.placeholder.js"></script>
+	<script src="js/bootstrap-typeahead.js"></script>
+	<script src="js/application.js"></script>
+	<script src="js/moment.min.js"></script>
+	<script src="js/jquery.dataTables.min.js"></script>
+	<script src="js/jquery.sortable.js"></script>
+
+	<!-- Page Scripts  =============================-->
+	<script type="text/javascript" src="js/jquery.gritter.js"></script>
+	<script type="text/javascript" src="js/gritter-custom.js"></script>
+
+	<!-- noty -->
+	<script src="js/noty/jquery.noty.js"></script>
+
+	<!-- layouts -->
+	<script type="text/javascript" src="js/noty/layouts/bottom.js"></script>
+	<script type="text/javascript" src="js/noty/layouts/bottomCenter.js"></script>
+	<script type="text/javascript" src="js/noty/layouts/bottomLeft.js"></script>
+	<script type="text/javascript" src="js/noty/layouts/bottomRight.js"></script>
+	<script type="text/javascript" src="js/noty/layouts/center.js"></script>
+	<script type="text/javascript" src="js/noty/layouts/centerLeft.js"></script>
+	<script type="text/javascript" src="js/noty/layouts/centerRight.js"></script>
+	<script type="text/javascript" src="js/noty/layouts/inline.js"></script>
+	<script type="text/javascript" src="js/noty/layouts/top.js"></script>
+	<script type="text/javascript" src="js/noty/layouts/topCenter.js"></script>
+	<script type="text/javascript" src="js/noty/layouts/topLeft.js"></script>
+	<script type="text/javascript" src="js/noty/layouts/topRight.js"></script>
+
+	<!-- themes -->
+	<script type="text/javascript" src="js/noty/themes/default.js"></script>
+
+	<script src="js/noty/noty-custom.js"></script>
+	<!-- Archon JS =============================-->
+	<script src="js/archon.js"></script>
+</body>
+</html>
