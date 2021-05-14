@@ -1,3 +1,11 @@
+"""
+Technological University Dublin - TUD
+B00106732 Musab Hersi Ali
+Module Name : Individual Project
+Title: File Type Identification Through Computer Vision
+Supervisor: Micheal Hegarty
+"""
+
 """ filetypeidentifier.py - Scan directory structure for defined 
 	filetypes & convert them to byteplot .pdf format, saving them in
 	new 'scanned_files' folder """
@@ -8,15 +16,15 @@ from train_test import identify , report_gen
 import argparse
 
 #GLOBALS
-FILETYPES = (".pdf", ".exe", ".docx", ".html", ".jpg", ".dll")
+FILETYPES = (".pdf", ".exe", ".html", ".jpg", ".dll")
 WIDTH = 256 #WIDTH IS ALWAYS 256
 
-def binary_convert(fptr, filename):
+def binary_convert(fp, filename):
 	""" Convert and Save file as .png 
 		@param: <str>fname - filename
 	"""
-	with open(fptr, "rb") as f:
-		f_length = os.path.getsize(fptr) #Length of file in bytes
+	with open(fp, "rb") as f:
+		f_length = os.path.getsize(fp) #Length of file in bytes
 		print(f"{f_length} Bytes")
 		
 		if f_length < WIDTH:
@@ -48,12 +56,12 @@ def dir_scan(path):
 		(colorama.Fore.LIGHTRED_EX, f'\nDIRECTORY: {dirpath}', end='')
 		print(colorama.Style.RESET_ALL) #reset terminal color
 		
-		for xt in range(6): #Iterate for each filetype		
+		for xt in range(5): #Iterate for each filetype		
 			for filename in files: #Check file extensions
 				if(filename.lower()).endswith(FILETYPES[xt]):
-					fptr = os.path.join(dirpath, filename) #path+fname
-					print(colorama.Fore.LIGHTYELLOW_EX, fptr)
-					binary_convert(fptr, filename)
+					fp = os.path.join(dirpath, filename) #path+fname
+					print(colorama.Fore.LIGHTYELLOW_EX, fp)
+					binary_convert(fp, filename)
 					print(colorama.Style.RESET_ALL)
 
 if __name__ == "__main__":
