@@ -1,7 +1,7 @@
 # Directory Scan & Conversion of Files to PNG
 
 ## Code:
-<p align="center"><img src="\screens\code_scanning.PNG"></img></p>
+![code_scanning](https://user-images.githubusercontent.com/80824671/118339356-8b884580-b510-11eb-82f1-562ce43c6950.png)
 
 
 <p align="center"><img src="screens/code_testing.PNG"></img></p>
