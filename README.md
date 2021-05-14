@@ -3,6 +3,8 @@
 ## Code:
 <p align="center"><img src="screens/code_scanning.PNG"></img></p>
 
+<a href="" rel="Code"><img src="/screens/code_scanning.PNG" alt="scanning directory" /></a>
+
 
 <p align="center"><img src="screens/code_testing.PNG"></img></p>
 
