@@ -12,9 +12,6 @@
 ## accuracy report
 <p align="center"><img src="screens/accuracy.PNG"></img></p>
 
-##directroy we want to scan.
-<p align="center"><img src="screens/dir_to_scan.PNG"></img></p>
-
 ## confusion matrix
 <p align="center"><img src="screens/confusion_matrix_withoud_normalisation_and_normalised.PNG"></img></p>
 
