@@ -18,9 +18,12 @@
 ![confusion_matrix_without_normalisation_and_normalised](https://user-images.githubusercontent.com/80824671/118339536-08b3ba80-b511-11eb-93bf-b29375bf11dc.png)
 
 
-## dir of scanned files for identification 
+## dir of scanned files for identification before it is being scanned
 ![dir_of_scanned_files_before_model_is_run](https://user-images.githubusercontent.com/80824671/118339552-1406e600-b511-11eb-89d5-e5f4397b99f0.png)
 
 
 ## Directory of to be scanned files (Creates png Copies, Original Files Remain Intact):
 ![dir_to_scan](https://user-images.githubusercontent.com/80824671/118339575-26811f80-b511-11eb-8d0f-215db0d8a56f.png)
+
+## directory of scanned files after files being scanned
+![directory_of_scanned_files_after_scanning_conversion_to_png](https://user-images.githubusercontent.com/80824671/118339877-161d7480-b512-11eb-9cf1-5350d8dda599.png)
