@@ -1,0 +1,4 @@
+This file is too small for the program to process, anything less than 256 Bytes doesn't
+return enough Bytes to properly build the array :(
+This file is too small for the program to process, anything less than 256
+The filesize for this file is 255 Bytes

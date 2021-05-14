@@ -1,0 +1,983 @@
+Q1
+ #include <iostream>
+    #include <string>
+    using namespace std;
+    class Class1 {
+            char a;
+    protected:
+            char b;
+    public:
+            char c;
+            Class1() { a='a'; b='b'; c='c'; }
+    };
+   
+    class Class2 : public Class1 {
+            char d;
+    public:
+            void set() {            
+                c = 'e';
+                d = 'd';
+            }
+    };
+   
+   
+    int main () {
+            Class2 a;
+            a.set();
+            cout << a.c << a.d;
+            return 0;
+    }
+
+
+Q2
+   int main()
+    {
+            int i = 8;
+            do {
+                i--;
+                cout << i--;
+            }
+            while(i);
+            return 0;
+    }
+
+
+Q3
+Which code, inserted into the main function, generates the output "12"?
+    #include <iostream>
+    #include <string>
+    using namespace std;
+    string fun(string s1, string s2)
+    {
+            return s1 + s2;
+    }
+    int main()
+    {
+            string s="1", *t = &s;
+            //insert code here
+            return 0;
+    }
+   
+
+Select the correct answer (single choice)
+cout << fun(*t,s);
+cout << fun(*t,"2");
+cout << fun("1",*t);
+cout << fun("1+2");
+
+
+Q4
+    #include <iostream>
+    #include <string>
+    using namespace std;
+    class One {
+    public: float f;            
+            One(float f) { this -> f = f; }
+    };
+    class Two {
+    public: float f;
+            Two (One o) { this -> f = o.f; }
+            void foo() { cout << (int)f; }
+    };
+    int main()
+    {
+       One o1(3.14);
+       Two o2 = o1;
+       o2.foo();
+    }
+    
+
+Q5
+   #include <iostream>
+    using namespace std;
+    int main()
+    {
+      const char c = '!';
+      const char *p;
+      p = &c;
+      *p = '?';
+      cout << *p;
+      return 0;
+    }
+    
+
+Q6
+ #include <iostream>
+    using namespace std;
+    class X1 {
+    public: virtual void foo() = 0;
+    };
+    class X2 : public X1 {
+    public: virtual void foo() { cout << "X2"; }
+    };
+    class X3 : public X1 {
+    public: virtual void foo() { cout << "X3"; }
+    };
+    int main()
+    {
+            X1 *a = new X2(), *b = new X3();
+            b->foo();
+            a->foo();
+            return 0;
+    }
+
+Q7
+   #include <iostream>
+    using namespace std;
+    int main (int argc, const char *argv[])
+    {
+      float B = 32;
+      { char B = '1'; cout << B; }
+      { int B = 2; cout << B; }
+      cout << B;
+      return 0;
+    }
+    
+
+Q8
+ #include <iostream>
+    using namespace std;
+    class Sup {
+    public: virtual void out() { cout << "p"; }
+    };
+    class Sub : public Sup {
+    public: virtual void out() { cout << "b"; }
+    };
+    int main()
+    {
+            Sub sub;
+            Sup *sup;
+            sup = &sub;
+            sup->out();
+            sub.out();
+            return 0;
+    }
+    
+
+Q9
+#include <iostream>
+    using namespace std;
+    int doit(int i, int j = 0)
+    {
+            return (i * j);
+    }
+    int main ()
+    {
+            cout << doit(doit(1,2));
+            return 0;
+    }
+
+Q10
+    #include <iostream>
+    using namespace std;
+    int doit(int x) {
+       return x << 1;
+    }
+    int main(){
+       int i;
+       i = doit(1) || doit(0);
+       cout << i;
+       return 0;
+    }
+
+Q11
+Variable "y" in class Y, will be...
+    class X {
+    private:     int x;
+    protected:   int y;
+    public:      int z;
+    };
+    class Y : protected X {
+    };
+       
+
+Select the correct answer (single choice)
+public
+protected
+none of these
+private
+
+
+Q12
+  #include <iostream>
+    using namespace std;
+    #define CALL(param) { if(param) cout << param++; }
+    int main()
+    {
+        int i = 1;
+        CALL(i);
+        cout << i;
+        return 0;
+    }
+        
+
+|Q13
+#include <iostream>
+    using namespace std;
+    int main(){
+       int a = 0;
+       if (++a == 1) {
+           cout << (a >> 1);
+       } else {
+           cout << (a);
+       }
+      return 0;
+    }
+
+Q14
+What happensif we use the operator new and the memory cannot be allocated?
+    #include <iostream>
+    #include <exception>
+    using namespace std;
+    int main () {
+      long i = 2000000000;
+      try
+      { char *text = new char[i]; }
+      catch (bad_alloc& e)
+      {  cout << "1"; }
+      catch (exception& e)
+      {  cout << "2"; }
+      catch (...)
+      {  cout << "3"; }
+      return 0;
+    }
+   
+
+Select the correct answer (single choice)
+It prints: 3
+It prints: 1
+It prints: 2
+None of these
+
+
+Q15
+    #include <iostream>
+    #include <string>
+    using namespace std;
+    struct S
+    {
+      char *p;
+    };
+    class C
+    {
+      S s;
+    public:
+      C() { s.p = new char; *s.p = 'A'; }
+      void p() { cout << ++(*s.p); }
+    };
+    int main()
+    {
+      C *c = new C();
+      c->p();
+      return 0;
+    }
+
+Q16
+  #include <iostream>
+    using namespace std;
+    class A
+    {
+    public: void out(){ cout << "A"; }
+    };
+    class B : public A
+    {
+    public: void out(){ cout << "B"; }
+    };
+    int main()
+    {
+            A *a;
+            a = new A();
+            a -> out();
+            a = new B();
+            a -> out();
+            return 0;
+    
+
+Q17
+ #include <iostream>
+    #include <cstdarg>
+    using namespace std;
+    int calculate(int &val, int arg)
+    {
+            val *= arg;
+            return arg;
+    }
+   
+    int main()
+    {
+            int i = 1;
+            int j = calculate(i,2);
+            cout << i << j;
+            return 0;
+    }
+
+Q18
+  #include <iostream>
+    #include <string>
+    using namespace std;
+    class cmplx{
+        double re, im;
+    public:
+        cmplx() : re(1),im(1) {}
+        cmplx(double r, double i) : re(r),im(i) {}
+        cmplx operator+(cmplx &);
+        void out() { cout << "(" << re << "," << im << ")"; }
+    };
+   
+    cmplx cmplx::operator+ (cmplx &a){
+        cmplx c(this->re + a.re, this->im + a.im);
+        return c;
+    }
+   
+   
+    int main(){
+            cmplx x(1,2),y,z;
+            z = x + y;
+            z.out();
+            return 0;
+    }
+
+Q19
+  #include <iostream>
+    using namespace std;
+    class cmplx{
+       double re,im;
+    public:
+       cmplx() : re(0),im(0) {}
+       cmplx(double x) { re = im = x; }
+       cmplx(double x,double y) { re = x; im = y; }
+       void out() { cout << "(" << re << "," << im << ")"; }    
+    };
+   
+    int main(){
+       cmplx c(1,2), cc(c);
+       cc.out();
+       return 0;
+    }
+
+Q20
+    #include <iostream>
+    #include <string>
+    using namespace std;
+    class One
+    {
+            char value;
+    public:
+            One() { value = 'A'; }
+            One(char v) : value(v) {}
+            void set(char c) {this -> value = c; }
+            void set() { this -> value = 'd'; }
+            char get(){ return value; }
+    };
+    int main()
+    {
+            One o1,*o2;
+            o2 = new One('b');
+            One *p;
+            p = &o1;
+            p -> set();
+            p = o2;
+            p -> set('c');
+            cout << o2->get() - o1.get();
+            return 0;
+    }
+
+Q21
+   #include <iostream>
+    using namespace std;
+    class Alpha {
+    public: char out(){ return 'A'; }
+    };
+    class Beta : public Alpha {
+    public: virtual char out(){ return 'B'; }
+    };
+    class Gamma : public Beta {
+    public: char out(){ return 'G'; }    
+    };
+    int main()
+    {
+            Alpha *a = new Alpha();
+            Alpha *b = new Beta();
+            Alpha *c = new Gamma();
+            cout << (a->out()) << (b->out()) << (c->out());
+            return 0;
+    }
+
+Q22
+
+
+Which code, inserted into the function main, generates the output "03"?
+    #include <iostream>
+    using namespace std;
+    class Uno
+    { public: void foo(){ cout << "0";}
+              void bar(){ cout << "1";}
+    };
+    class Due : public Uno
+    { public: void foo(){ cout << "2";}
+              void bar(){ cout << "3";}
+    };
+    int main()
+    {
+            Due d;
+            // insert code here
+            d.bar();
+    }
+       
+
+Select the correct answer (single choice)
+d->Uno::foo();
+d.Due::foo();
+d.Uno::foo();
+d->Due::foo();
+
+
+Q23
+Variable "r" in class C3, will be...
+    #include <iostream>
+    using namespace std;
+   
+    class C1
+    {
+    public    int p;
+    private   int q;
+    protected int r;
+    };
+   
+    class C2 : private C1 {};
+   
+    class C3 : public C2 {};
+       
+
+Select the correct answer (single choice)
+none of these
+private
+protected
+public
+
+
+Q24
+    #include <iostream>
+    using namespace std;
+    int main()
+    {
+      const PI = 3.14;
+      const PI2 = PI * PI;
+      cout << PI2;
+      return 0;
+    }
+       
+
+Q25
+    #include <iostream>
+    #include <string>
+    using namespace std;
+    class Uno {
+    public: int n;
+            Uno() { n = 1; }
+            Uno(int v) { n = v;}
+    };
+    class Due : public Uno {
+    public:
+            int *arr;
+            Due() : Uno() {
+              arr = new int[n];
+            }
+            Due(int a) : Uno(a) {
+              arr = new int[n];
+            }
+            ~Due() { delete arr; }
+    };
+    int main () {
+      Due d(2);
+      Due e;  
+      cout << d.n + e.n;
+      return 0;
+    }
+       
+
+Q26
+   #include <iostream>
+    using namespace std;
+    int main()
+    {
+     int x = -2, y;
+     float f = 2.5, g;
+     g = x;
+     y = f;
+     cout << (int)g / y;
+     return 0;
+    }
+       
+
+Q27
+ #include <iostream>
+    #include <string>
+    using namespace std;
+    class Uno {
+    public: int Int;
+    };
+    class Due : public Uno {
+    public: Due() { Int = 2;}
+            Due(int x) { Int = x == 0 ? 2 : x - 2; }
+    };
+    int main () {
+            Due d,d2(0);
+            cout << d.Int - d2.Int;
+            return 0;
+       
+    }
+
+Q28
+   #include <iostream>
+    using namespace std;
+    namespace OuterSpace
+    {
+      int x = 1;
+      int y = 2;
+    }
+    namespace InnerSpace
+    {
+      float x = 3.0;
+      float y = 4.0;
+    }
+    int main () {
+            { using namespace InnerSpace;
+              cout << x << " ";
+            }{
+              using namespace OuterSpace; using InnerSpace::y;
+              cout << y;
+            }
+              return 0;
+    }
+
+Q29
+#include <iostream>
+    using namespace std;
+    float doit(int a, int b)
+    {
+            return a * b;
+    }
+    float doit(float a, float b)
+    {
+            return a + b;
+    }
+    int main()
+    {
+            cout << doit(doit(1,2),doit(3.f,4.f));
+            return 0;
+    }   
+
+Q30
+What is the output of the program if the value of 1 is supplied as input?
+    #include <iostream>
+    using namespace std;
+    class Uno {
+    public: char Char;
+    };
+    int main () {
+      int swtch;
+      Uno u;
+      u.Char = '5';
+      cin >> swtch;
+      try
+      {
+              switch (swtch)
+              {
+              case 3:  throw 1;
+              case 2:  throw 3.f;
+              case 1:  throw u;
+              }
+      }
+      catch (int e)
+      { cout << e; }
+      catch (Uno e)
+      { cout << e.Char; }
+      catch (...)
+      { cout << "?"; }
+      return 0;
+    }
+       
+
+Select the correct answer (single choice)
+Compilation error
+It prints: 5
+It prints: 3
+It prints: 1
+
+
+
+Q31
+  #include <iostream>
+    using namespace std;
+    char max(char x, char y) {
+      if(x > y)
+        return y;
+      else
+        return x;
+    }
+   
+    int main()
+    {
+      char chr = max('a', 'z');
+      cout << chr;
+      return 0;
+    }
+
+Q32
+ #include <iostream>
+    using namespace std;
+    bool compare(bool t, bool u)
+    {
+            return t < u;
+    }
+    int main()
+    {
+            cout << compare(true,false);
+            return 0;
+    }
+
+Q33
+  #include <iostream>
+    #include <string>
+    using namespace std;
+    int main()
+    {
+            bool t[] = {false, true, false & true};
+            string u[2] = {"false", "true"};
+            bool *p;
+            p = t + 2;
+            cout << u[*p];
+            return 0;
+    }
+
+Q34
+   #include <iostream>
+    using namespace std;
+    int main()
+    {
+       int i = 10;
+       float f = 2.5;
+       cout << float(i) / int(f);
+       return 0;
+    }
+
+Q35
+   #include <iostream>
+    using namespace std;
+    struct S {
+      int  a;
+      char b;
+      struct {
+              float a;
+              int   b;
+      } c;
+    };
+    int main (int argc, const char *argv[])
+    {
+      S s = { 1, 2, 3, 4 };
+      cout << s.c.a << s.c.b;
+    }
+
+Q36
+  #include <iostream>
+    #include <string>
+   
+    using namespace std;
+   
+    int main()
+    {
+       string s1 = "top";
+       string s2;
+       s2.append(s1).append("down");
+       cout << s2;
+       return( 0 );
+    }
+
+Q37
+#include <iostream>
+    #include <string>
+    using namespace std;
+    int boo(int v)
+    {
+            v++;
+            return ++v;
+    }
+    int main()
+    {
+            float x = 3;
+            x = boo(x);
+            cout << x;
+            return 0;
+    }
+
+Q38
+ #include <iostream>
+    using namespace std;
+    int main()
+    {
+            int cnt = 10;
+            do {
+                cnt--;
+                if (cnt % 3 == 2)
+                    break;
+                cout << cnt;
+            }
+            while(cnt);
+            return 0;
+    }
+    
+
+Q39
+  #include <iostream>
+    using namespace std;
+    int main()
+    {
+            char *abc;
+       
+            abc = new char[26];
+            for(int i = 0; i < 26; i++)
+                abc[i] = 'a' + i;            
+            cout << *(abc + 2);
+            return 0;
+    }
+
+Q40
+   #include <iostream>
+    #include <string>
+    using namespace std;
+    class Uno {
+    public: Uno() { cout << "X"; }
+    };
+   
+    Uno foo(Uno d)
+    {
+            Uno e = d;
+            return e;
+    }
+   
+    int main()
+    {
+            Uno u;
+            foo(u);
+            return 0;
+    }
+
+Q41
+    #include <iostream>
+    #include <string>
+    using namespace std;
+    class Uno {
+    public: ~Uno() { cout << "X"; }
+    };
+   
+    void foo(Uno *d)
+    {
+                Uno e;
+            *d = e;
+    }
+   
+    int main()
+    {
+            Uno *u = new Uno;
+            foo(u);
+                delete u;
+            return 0;
+    }
+
+Q42
+#include <iostream>
+    using namespace std;
+    int k = -1;
+    class Class
+    {
+    public: char *adr;
+            Class() { adr = new char[k]; }
+            ~Class() { delete [] adr; }
+    };
+   
+    int fun(void)
+    {
+            Class object;
+            return 0.5f;
+    }
+   
+    int main()
+    {
+            fun();
+            return 0;
+    }
+    
+
+Q43
+   #include <iostream>
+    #include <string>
+    using namespace std;
+    struct Who
+    {
+            string nick;
+    };
+   
+    class She
+    {
+            Who *who;
+    public:
+            She() {
+                who = new Who;
+                who -> nick = "Jane";
+            }
+            string out (){
+                return who -> nick;
+            }
+    };
+   
+   
+    int main()
+    {
+            She they[2];
+            for(int i = 0; i < 2; i++)
+                cout << they[i].out();
+            return 0;
+    }
+    
+
+Q44
+  #include <iostream>
+    using namespace std;
+    int main()
+    {
+            int i = 0;
+            for(; i < 5; i++);
+            cout << i;
+            return 0;
+    }
+
+Q45
+How many times will the program print "HI!"?
+    #include <iostream>
+    using namespace std;
+    int X = 5;
+    int main()
+    {
+       cout << "HI!";
+       if(X-- > 0)
+            main();
+       return 0;
+    }
+   
+
+Select the correct answer (single choice)
+5
+1
+6
+2
+
+
+Q46
+    #include <iostream>
+    using namespace std;
+    int doit(int a, float b)
+    {
+       return a / b;  
+    }
+   
+    int main()
+    {
+       float x = doit(1.5f, 2l);
+       cout << x << ":" << doit(1, 1.f);
+       return 0;
+    }
+    
+
+Q47
+Which code, appended to the class Uno, generates the output "by"?
+
+    #include <iostream>
+    #include <string>
+    using namespace std;
+    class Uno {
+    protected: char y;
+    public:    char z;
+    };
+     // insert code here
+    {
+    public:
+    void set() {
+            y = 'a';  z = 'z';
+    }
+    void out() { cout << ++y << --z; }
+    };
+   
+    int main () {
+            Due b;
+            b.set();
+            b.out();
+            return 0;
+    }
+   
+ 
+
+Select the correct answer(s) (multiple choice)
+class Due : private Uno
+class Due : protected Uno
+class Due
+class Due : public Uno
+
+
+Q48
+#include <iostream>
+    using namespace std;
+    int main()
+    {
+     int i = 2;
+     float f = 1.4;
+     char c = 'a';
+     bool b = true;
+     c += i + f + b;
+     cout << c;
+     return 0;
+    }
+    
+
+Q49
+Which statement will you add in the following program to make it correct?
+    #include <string>
+    int main() {
+        std::string s = "Here I am!";
+        std::cout << s;
+        return 0;
+    }
+   
+
+Select the correct answer (single choice)
+#include <stdexcept>
+#include <iostream>
+#include <cmath>
+#include <string>
+
+
+Q50
+ #include <iostream>
+    #include <string>
+    using namespace std;
+    class Uno {
+            int val;
+    public: Uno(int x) { val = x; }
+            int out() { return val; }
+            void operator++(int var) {
+                val += val;
+            }
+    };
+    ostream &operator<<(ostream &o, Uno u)
+    {
+        return o << u.out();
+    }
+   
+    int main()
+    {
+            Uno i(2);
+            i++;
+            cout << i;
+            return 0;
+    }
+
