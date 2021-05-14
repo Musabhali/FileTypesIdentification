@@ -22,5 +22,5 @@
 ![dir_of_scanned_files_before_model_is_run](https://user-images.githubusercontent.com/80824671/118339552-1406e600-b511-11eb-89d5-e5f4397b99f0.png)
 
 
-## Directory of scanned files (Creates png Copies, Original Files Remain Intact):
+## Directory of to be scanned files (Creates png Copies, Original Files Remain Intact):
 ![dir_to_scan](https://user-images.githubusercontent.com/80824671/118339575-26811f80-b511-11eb-8d0f-215db0d8a56f.png)
